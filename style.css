@@ -1725,6 +1725,48 @@ option {
 
 .community-button:hover{
   transform:scale(1.03);
+@media(max-width:768px){
+  .controller{
+    padding:8px 0 24px !important;
+    overflow:hidden !important;
+  }
+
+  .sceneWrap{
+    width:100vw !important;
+    overflow:hidden !important;
+    padding:0 !important;
+  }
+
+  .machine{
+    width:100vw !important;
+    transform:scale(.82) !important;
+    transform-origin:top center !important;
+  }
+
+  .screen-case,
+  .device{
+    width:96vw !important;
+    max-width:96vw !important;
+  }
+
+  .device{
+    display:flex !important;
+    flex-direction:column !important;
+    padding:96px 10px 36px !important;
+    gap:14px !important;
+  }
+
+  .pad-grid.five,
+  .transport,
+  .mode-row,
+  .media-row{
+    grid-template-columns:repeat(2,1fr) !important;
+  }
+
+  .orientation-note{
+    display:block !important;
+  }
+}
 }
 }
 }
