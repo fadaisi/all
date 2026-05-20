@@ -1553,15 +1553,14 @@ option {
     padding: 22px;
   }
 
-  .about-panel h2,
-  .controller-intro h2,
-  .shop h2,
-  .community h2 {
-    font-size: clamp(2.1rem, 12vw, 4.3rem);
-    line-height: 1.04;
-    letter-spacing: -.015em;
-  }
-
+.about-panel h2{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(1.7rem,3.8vw,4rem)!important;
+  line-height:1.05!important;
+  letter-spacing:0.01em!important;
+  max-width:1100px;
+  font-weight:400;
+}
   .about-text,
   .controller-intro p,
   .shop-inner > p,
@@ -1642,4 +1641,90 @@ option {
   .y5 { left: 10%; top: 70%; }
   .y6 { left: 22%; top: 80%; }
   .y7 { left: 43%; top: 84%; }
+  .device{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:18px !important;
+}
+
+.deck,
+.center-panel{
+  width:100% !important;
+}
+
+.knob-row{
+  grid-template-columns:repeat(2,1fr) !important;
+}
+
+.pad-grid.five{
+  grid-template-columns:repeat(2,1fr) !important;
+}
+
+.pad{
+  height:58px !important;
+  font-size:12px !important;
+}
+
+.transport{
+  grid-template-columns:repeat(2,1fr) !important;
+}
+
+.mode-row,
+.media-row{
+  grid-template-columns:repeat(2,1fr) !important;
+}
+
+.mixer{
+  grid-template-columns:repeat(4,1fr) !important;
+  height:170px !important;
+}
+
+.vlc-window{
+  height:220px !important;
+}
+
+@media(max-width:768px){
+  .controller{
+    min-height:auto !important;
+    padding-bottom:20px !important;
+  }
+
+  .sceneWrap{
+    min-height:auto !important;
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .machine{
+    margin-bottom:0 !important;
+  }
+
+  .device{
+    min-height:auto !important;
+    margin-bottom:0 !important;
+    padding-bottom:40px !important;
+  }
+
+  .archive{
+    margin-top:0 !important;
+  }
+  .community-button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:220px;
+  height:64px;
+  border-radius:999px;
+  background:#fff6ef;
+  color:#4d1cff;
+  font-family:'Anton',sans-serif;
+  font-size:2rem;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.community-button:hover{
+  transform:scale(1.03);
+}
+}
 }
