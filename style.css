@@ -1766,6 +1766,17 @@ option {
   .orientation-note{
     display:block !important;
   }
+
+  .orientation-note{
+  display:none;
+  text-align:center;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin:10px auto 14px;
+  max-width:280px;
+}
 }
 }
 }
