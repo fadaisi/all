@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>FADAISI — pesquisa, controladora, arquivo e loja</title>
+  <meta name="description" content="FADAISI por Janice Mascarenhas: objetos assistivos, crip design, arte e deficiência, tecnologia assistiva, controladora audiovisual generativa e loja.">
+  <meta name="keywords" content="FADAISI, Janice Mascarenhas, objetos assistivos, arte e deficiência, tecnologia assistiva, crip design, assistive objects, mobility aid sculpture, psy trance generative, audiovisual controller">
+  <link rel="stylesheet" href="https://use.typekit.net/jkx1yiu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="flash"></div>
+  <div id="sparkleCursor" aria-hidden="true"></div>
+
+  <header class="site-hero" id="sobre">
+    <div class="flare f1"></div><div class="flare f2"></div><div class="flare f3"></div>
+
+    <p class="topdesc">interactive systems, visual creations, hardware and research</p>
+    <h1 class="main-logo">FADAISI</h1>
+
+    <nav class="menu" aria-label="Menu principal">
+      <a href="#sobre">sobre</a>
+      <a href="#controladora">controladora</a>
+      <a href="#arquivo">arquivo</a>
+      <a href="#loja">loja</a>
+      <a href="#comunidade">comunidade</a>
+    </nav>
+
+    <p class="subtitle">CREATIVE TECHNOLOGIST, MULTIMEDIA ARTIST<br>FROM BRAZIL, RJ</p>
+
+    <section class="about-panel">
+      <p class="section-tag">ABOUT</p>
+      <h2>assistive objects, desire, critique, and aesthetic presence</h2>
+      <p class="about-text">Janice Mascarenhas is a visual artist exploring many mediums as digital art, sculpture, video installation, hair braided and music. Looking for technologies to disabled people</p>
+
+      <div class="about-grid">
+        <article><img src="./images/assistive-objects.png" alt="Objeto assistivo cromado"><span>assistive objects</span><small>mobilidade, luxo e design especulativo</small></article>
+        <article><img src="./images/crip-design.png" alt="Pesquisa visual sobre crip design"><span>crip design</span><small>corpo, política e escultura contemporânea</small></article>
+        <article><img src="./images/sound-systems.png" alt="Sistema sonoro experimental"><span>sound systems</span><small>frequência urbana e prótese sonora</small></article>
+        <article><img src="./images/post-human-fashion.png" alt="Moda pós-humana cromada"><span>post-human fashion</span><small>cromo, internet e desejo material</small></article>
+        <article><img src="./images/artificial-braids.png" alt="Tranças artificiais"><span>artificial braids</span><small>cabelo como tecnologia escultórica</small></article>
+        <article><img src="./images/mobility-aesthetics.png" alt="Estética de mobilidade"><span>mobility aesthetics</span><small>apoio corporal como presença visual</small></article>
+        <article><img src="./images/digital-archive.png" alt="Arquivo digital experimental"><span>digital archive</span><small>internet, memória e imagem instável</small></article>
+        <article><img src="./images/community-lab.png" alt="Laboratório comunitário"><span>community lab</span><small>pesquisa aberta e tecnologias de cuidado</small></article>
+      </div>
+    </section>
+  </header>
+
+  <section class="controller-intro" id="controladora">
+    <p class="section-tag">GENERATIVE MUSIC VJ DJ CONTROL</p>
+    <h2>trancera 2026</h2>
+    <p>The music is generated through code in the browser: kick, bass, hat, synth, and glitch follow a psy trance logic using BPM, step sequencing, and Web Audio synthesis.
+On Deck A, control the rhythm, and on Deck B, add voice and effects to the video..
+</p>
+<p>Click “LIGAR CONTROLADORA”</p>
+    
+  </section>
+
+  <main class="controller">
+    <button id="startButton" type="button">LIGAR CONTROLADORA</button>
+
+    <section class="sceneWrap" aria-label="Controladora FADAISI TRANCERA 2026">
+      <section class="machine">
+        <section class="screen-case">
+          <div class="vlc-window">
+            <div class="vlc-titlebar">
+              <div class="vlc-title"><span class="vlc-icon"></span>FADAISI_VJ_PREVIEW.EXE</div>
+              <div class="vlc-controls"><span>_</span><span>□</span><span>×</span></div>
+            </div>
+            <div class="vlc-menu"><span>Media</span><span>Playback</span><span>Audio</span><span>Video</span><span>Tools</span><span>Help</span></div>
+            <div class="video-box" id="videoBox">
+              <video id="vjVideo" src="./asset/video.mp4" muted loop playsinline crossorigin="anonymous" poster="./images/controller-poster.jpg"></video>
+              <canvas id="asciiCanvas"></canvas>
+              <div id="effectLayer"></div>
+              <div class="scanline"></div>
+              <div class="video-label">TRANCERA 2026 / LIVE VISUAL</div>
+            </div>
+            <div class="vlc-bottom">
+              <button id="mainPlay" type="button">▶</button>
+              <div class="vlc-progress"><span id="progressFill"></span></div>
+              <div class="vlc-time" id="timeLabel">00:00 / 00:00</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="device">
+          <div class="shell"></div>
+
+          <header class="brand-device">
+            <h2>FADAISI</h2>
+            <p>TRANCERA 2026</p>
+          </header>
+
+          <section class="deck deck-a" aria-label="Deck A">
+            <div class="deck-screen">
+              <div class="screen-title"><span>DECK A</span><span>BPM 145</span></div>
+              <div class="wave"></div>
+              <small>GERADOR PSY / BEAT / BASS / SYNTH</small>
+            </div>
+
+            <div class="knob-row">
+              <button class="knob" data-control="level_a" type="button"><span></span>LEVEL</button>
+              <button class="knob" data-control="pan_a" type="button"><span></span>PAN</button>
+              <button class="knob" data-control="fx_a" type="button"><span></span>FX A</button>
+              <button class="knob" data-control="filter_a" type="button"><span></span>BPM</button>
+            </div>
+
+            <div class="pad-module">
+              <b>DECK A / MÚSICA GERATIVA</b>
+              <div class="pad-grid five">
+                <button class="pad" data-control="pad_a_1" type="button">KICK</button>
+                <button class="pad" data-control="pad_a_2" type="button">BASS</button>
+                <button class="pad" data-control="pad_a_3" type="button">HAT</button>
+                <button class="pad" data-control="pad_a_4" type="button">SYNTH</button>
+                <button class="pad" data-control="pad_a_5" type="button">GLITCH</button>
+              </div>
+            </div>
+
+            <div class="transport">
+              <button class="btn" data-control="shift_a" type="button">SHIFT</button>
+              <button class="btn" data-control="cue_a" type="button">CUE</button>
+              <button class="btn play" data-control="play_a" type="button">START</button>
+              <button class="btn" data-control="sync_a" type="button">SYNC</button>
+            </div>
+          </section>
+
+          <section class="center-panel" aria-label="Mixer central">
+            <div class="mode-row">
+              <button class="btn" data-control="visual" type="button">VISUAL</button>
+              <button class="btn" data-control="effect" type="button">EFFECT</button>
+              <button class="btn" data-control="camera" type="button">CAMERA</button>
+              <button class="btn" data-control="layer" type="button">LAYER</button>
+            </div>
+
+            <div class="mixer">
+              <label class="fader"><input data-control="volume_a" type="range" min="0" max="1" step="0.01" value="0.85"><span></span></label>
+              <label class="fader"><input data-control="volume_b" type="range" min="0" max="1" step="0.01" value="0.85"><span></span></label>
+              <label class="fader"><input data-control="pan_mix" type="range" min="-1" max="1" step="0.01" value="0"><span></span></label>
+              <label class="fader"><input data-control="video_fx" type="range" min="0" max="1" step="0.01" value="0"><span></span></label>
+              <small>MIXER / EFFECT / VIDEO / SOUND</small>
+            </div>
+
+            <div class="cross">
+              <span>A</span>
+              <input data-control="crossfader" type="range" min="-1" max="1" step="0.01" value="0">
+              <i></i>
+              <span>B</span>
+            </div>
+
+            <div class="media-row">
+              <small>CROSS MEDIA CONTROL</small>
+              <button class="media" data-control="audio" type="button">AUDIO</button>
+              <button class="media" data-control="video" type="button">VIDEO</button>
+              <button class="media" data-control="light" type="button">LIGHT</button>
+              <button class="media" data-control="midi" type="button">MIDI</button>
+            </div>
+          </section>
+
+          <section class="deck deck-b" aria-label="Deck B">
+            <div class="deck-screen">
+              <div class="screen-title"><span>DECK B</span><span>BPM 145</span></div>
+              <div class="wave"></div>
+              <small>VIDEO / VOZ / SAMPLE / IMAGEM</small>
+            </div>
+
+            <div class="knob-row">
+              <button class="knob" data-control="level_b" type="button"><span></span>LEVEL</button>
+              <button class="knob" data-control="pan_b" type="button"><span></span>PAN</button>
+              <button class="knob" data-control="fx_b" type="button"><span></span>FX B</button>
+              <button class="knob" data-control="filter_b" type="button"><span></span>FILTER</button>
+            </div>
+
+            <div class="pad-module">
+              <b>DECK B / VÍDEO + VOZ</b>
+              <div class="pad-grid five">
+                <button class="pad" data-control="pad_b_1" type="button">VOZ 01</button>
+                <button class="pad" data-control="pad_b_2" type="button">VOZ 02</button>
+                <button class="pad" data-control="pad_b_3" type="button">VOZ 03</button>
+                <button class="pad" data-control="pad_b_4" type="button">ASCII</button>
+                <button class="pad" data-control="pad_b_5" type="button">ZOOM</button>
+              </div>
+            </div>
+
+            <div class="transport">
+              <button class="btn" data-control="shift_b" type="button">SHIFT</button>
+              <button class="btn" data-control="cue_b" type="button">CUE</button>
+              <button class="btn play" data-control="play_b" type="button">VOZ LOOP</button>
+              <button class="btn" data-control="sync_b" type="button">SYNC</button>
+            </div>
+          </section>
+
+          <div class="status" id="status">pronto</div>
+          <i class="screw s1"></i><i class="screw s2"></i><i class="screw s3"></i><i class="screw s4"></i>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <section class="archive" id="arquivo">
+    <div class="archive-logo">FADAISI</div>
+    <div class="year y1">2019</div><div class="year y2">2020</div><div class="year y3">2021</div><div class="year y4">2022</div><div class="year y5">2023</div><div class="year y6">2024</div><div class="year y7">2025</div>
+    <div class="moon">SOON</div>
+  </section>
+
+  <section class="shop" id="loja">
+    <div class="shop-inner">
+      <p class="section-tag">LOJA / MERCHAN</p>
+      <h2>objetos impressos, zines e fragmentos do arquivo</h2>
+      <p>tiragens pequenas, imagens de arquivo e publicações..</p>
+
+      <div class="shop-grid" aria-label="produtos da loja">
+        <article class="product" data-id="zine" data-title="fanzine fadaisi — 1ª edição" data-price="25" data-img="./images/fanzine-fadaisi.png" data-desc="primeira edição impressa do universo FADAISI, em formato de zine colecionável, com estética de arquivo, manifesto visual e memória de internet." data-options="impresso comum|assinado + R$15">
+          <button class="product-card" type="button"><div class="product-img"><img src="./images/fanzine-fadaisi.png" alt="Fanzine Fadaisi 1ª edição"></div><h3>fanzine fadaisi</h3><p>primeira edição impressa do universo FADAISI.</p><span>R$25,00</span></button>
+          <button class="buy" type="button">comprar</button>
+        </article>
+        <article class="product" data-id="flag" data-title="bandeira — I do braids everymonth" data-price="150" data-img="./images/bandeira-braids-everymonth.png" data-desc="bandeira têxtil para parede, performance, quarto, ateliê ou rua. peça visual para transformar imagem em território." data-options="70 x 70 cm|100 x 100 cm + R$60">
+          <button class="product-card" type="button"><div class="product-img"><img src="./images/bandeira-braids-everymonth.png" alt="Bandeira I do braids everymonth"></div><h3>bandeira</h3><p>peça têxtil para parede, performance, quarto, ateliê ou rua.</p><span>R$150,00</span></button>
+          <button class="buy" type="button">comprar</button>
+        </article>
+        <article class="product" data-id="poster" data-title="poster — hot wheels" data-price="60" data-img="./images/poster-hot-wheels.png" data-desc="poster artístico em tiragem curta, imagem especulativa sobre corpo, mobilidade, tecnologia assistiva e ficção visual." data-options="A3 fosco|A2 fosco + R$40">
+          <button class="product-card" type="button"><div class="product-img"><img src="./images/poster-hot-wheels.png" alt="Poster Hot Wheels"></div><h3>poster hot wheels</h3><p>imagem especulativa sobre corpo, mobilidade e tecnologia assistiva.</p><span>R$60,00</span></button>
+          <button class="buy" type="button">comprar</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="community" id="comunidade">
+    <div class="community-box">
+      <p class="section-tag">COMUNIDADE</p>
+      <h2>join the archive</h2>
+      <p>Receba atualizações da pesquisa, lançamentos, drops, processos, protótipos e chamadas para colaboração.</p>
+      <form class="email-row"><input type="email" placeholder="seu email"><button type="button">entrar</button></form>
+    </div>
+  </section>
+
+  <button class="cart-btn" id="openCart" type="button" aria-label="abrir carrinho">🛒<span id="cartCount">0</span></button>
+  <div class="overlay" id="overlay"></div>
+
+  <section class="modal" id="productModal" aria-label="página do produto">
+    <div class="head"><h2>produto</h2><button id="closeModal" type="button">×</button></div>
+    <div class="product-page">
+      <img id="modalImg" src="" alt="">
+      <div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <p><strong id="modalPrice"></strong></p>
+        <label>opção<select id="modalVariant"></select></label>
+        <label>quantidade<input id="modalQty" type="number" min="1" value="1"></label>
+        <button class="primary" id="modalAdd" type="button">adicionar ao carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <aside class="drawer" id="cartDrawer" aria-label="carrinho de compras">
+    <div class="head"><h2>carrinho</h2><button id="closeCart" type="button">×</button></div>
+    <div id="cartItems"></div>
+
+    <section class="checkout">
+      <h3>entrega</h3>
+      <label>CEP<input id="cep" inputmode="numeric" maxlength="9" placeholder="00000-000"></label>
+      <label>frete<select id="shipping"><option value="0" data-days="—">retirar ou combinar — R$0,00</option><option value="12" data-days="3 a 7 dias úteis">PAC local — R$12,00</option><option value="22" data-days="2 a 5 dias úteis">SEDEX local — R$22,00</option><option value="38" data-days="7 a 15 dias úteis">Brasil — R$38,00</option></select></label>
+      <p id="deliveryTime">tempo estimado: —</p>
+    </section>
+
+    <section class="checkout">
+      <h3>pagamento</h3>
+      <label>forma de pagamento<select id="payment"><option value="pix">PIX</option><option value="card">cartão</option><option value="boleto">boleto</option></select></label>
+      <div class="payment-box show" id="pixBox">PIX simulado para teste. Para vender de verdade, conecte Mercado Pago, Stripe, PagSeguro ou Shopify checkout.<div id="pixCode">PIX-FADAISI-AGUARDANDO-TOTAL</div></div>
+      <div class="payment-box" id="cardBox"><label>número do cartão<input placeholder="0000 0000 0000 0000"></label><label>nome impresso<input placeholder="nome completo"></label><label>validade e cvv<input placeholder="MM/AA — 000"></label></div>
+      <div class="payment-box" id="boletoBox">Boleto simulado. Vencimento em 3 dias úteis.</div>
+    </section>
+
+    <section class="checkout">
+      <h3>resumo</h3>
+      <div class="line"><span>produtos</span><strong id="subtotal">R$0,00</strong></div>
+      <div class="line"><span>frete</span><strong id="frete">R$0,00</strong></div>
+      <div class="line grand"><span>total</span><strong id="total">R$0,00</strong></div>
+      <button class="primary" id="finish" type="button">finalizar compra</button>
+      <button class="secondary" id="clearCart" type="button">limpar carrinho</button>
+    </section>
+  </aside>
+
+  <footer class="supporters"><span>barra de apoiadores: “janice doou R$2,50” | “paula doou R$3,00” | “luck doou R$1,00” | “kristen doou R$5,00” |</span></footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
