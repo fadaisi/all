@@ -1,0 +1,10 @@
+Coloque aqui as imagens da loja:
+
+fanzine-fadaisi-01.png
+fanzine-fadaisi-02.png
+bandeira-braids-everymonth-01.png
+bandeira-braids-everymonth-02.png
+poster-hot-wheels-01.png
+poster-hot-wheels-02.png
+
+Cada produto já tem espaço para 2 imagens na janela de compra.
